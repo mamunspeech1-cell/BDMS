@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>শখের বাজার | Shokher Bazar</title>
+
+<meta name="description" content="শখের বাজার - আপনার পছন্দের সবকিছু এক জায়গায়। Watches, Wallets, Sunglasses, Clothing, Electronics and more.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, "Noto Sans Bengali", sans-serif;
+    background:#f7f8fa;
+    color:#222;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    background:#111827;
+    color:white;
+    padding:9px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+}
+
+.top-bar a{
+    color:white;
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:white;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo{
+    text-decoration:none;
+    color:#111827;
+    min-width:190px;
+}
+
+.logo-main{
+    font-size:25px;
+    font-weight:800;
+    color:#e11d48;
+}
+
+.logo-sub{
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#555;
+    margin-top:2px;
+}
+
+.search-box{
+    flex:1;
+    max-width:550px;
+    display:flex;
+    border:1px solid #ddd;
+    border-radius:30px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:13px 18px;
+    font-size:14px;
+}
+
+.search-box button{
+    border:none;
+    background:#e11d48;
+    color:white;
+    padding:0 22px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.header-icons{
+    display:flex;
+    gap:12px;
+}
+
+.icon-btn{
+    border:1px solid #eee;
+    background:white;
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    background:#e11d48;
+    color:white;
+    padding:12px 5%;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:.8;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:480px;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.25)),
+    linear-gradient(135deg,#111827,#e11d48);
+    display:flex;
+    align-items:center;
+    padding:60px 8%;
+    color:white;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero small{
+    background:rgba(255,255,255,.15);
+    padding:8px 15px;
+    border-radius:30px;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.8;
+    color:#eee;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    border:none;
+}
+
+.btn-primary{
+    background:#e11d48;
+    color:white;
+}
+
+.btn-light{
+    background:white;
+    color:#111827;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:70px 5%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.category{
+    background:white;
+    padding:28px 15px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.category-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.category h3{
+    font-size:16px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    position:relative;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+.product-image{
+    height:220px;
+    background:#f1f3f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+}
+
+.discount{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#e11d48;
+    color:white;
+    padding:5px 9px;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.wishlist{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#e11d48;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:13px;
+    margin-left:7px;
+}
+
+.buy-btn{
+    width:100%;
+    margin-top:14px;
+    padding:11px;
+    border:none;
+    background:#111827;
+    color:white;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.buy-btn:hover{
+    background:#e11d48;
+}
+
+/* ================= OFFER ================= */
+
+.offer{
+    background:linear-gradient(135deg,#111827,#e11d48);
+    color:white;
+    border-radius:20px;
+    padding:55px;
+    text-align:center;
+}
+
+.offer h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.offer p{
+    margin-bottom:25px;
+    color:#eee;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.feature-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#777;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:#f8f9fa;
+    padding:30px;
+    border-radius:15px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.contact-item a{
+    color:#e11d48;
+    text-decoration:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:55px 5% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
+    margin-bottom:40px;
+}
+
+footer h3{
+    margin-bottom:18px;
+}
+
+footer p{
+    color:#bbb;
+    line-height:1.8;
+    font-size:14px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:10px;
+}
+
+footer a{
+    color:#bbb;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #374151;
+    padding-top:20px;
+    text-align:center;
+    color:#999;
+    font-size:13px;
+}
+
+.powered{
+    margin-top:8px;
+    color:#e11d48;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+/* ================= AI CHAT ================= */
+
+.ai-button{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:62px;
+    height:62px;
+    border:none;
+    border-radius:50%;
+    background:#e11d48;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:3000;
+}
+
+.chat-box{
+    position:fixed;
+    right:20px;
+    bottom:95px;
+    width:350px;
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+    display:none;
+    z-index:2999;
+}
+
+.chat-header{
+    background:#e11d48;
+    color:white;
+    padding:17px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.chat-header h3{
+    font-size:16px;
+}
+
+.chat-close{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.chat-body{
+    height:300px;
+    overflow-y:auto;
+    padding:15px;
+    background:#f8f9fa;
+}
+
+.bot-message{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.user-message{
+    background:#e11d48;
+    color:white;
+    padding:10px;
+    border-radius:10px;
+    margin:8px 0 8px auto;
+    width:max-content;
+    max-width:80%;
+}
+
+.chat-input{
+    display:flex;
+    border-top:1px solid #ddd;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:13px;
+}
+
+.chat-input button{
+    width:55px;
+    border:none;
+    background:#e11d48;
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .top-bar{
+        font-size:11px;
+        padding:8px 4%;
+    }
+
+    header{
+        flex-wrap:wrap;
+        padding:12px 4%;
+    }
+
+    .logo{
+        min-width:auto;
+    }
+
+    .logo-main{
+        font-size:21px;
+    }
+
+    .search-box{
+        order:3;
+        flex-basis:100%;
+        max-width:none;
+    }
+
+    .header-icons{
+        gap:5px;
+    }
+
+    .icon-btn{
+        padding:8px;
+    }
+
+    nav{
+        gap:15px;
+        overflow-x:auto;
+        justify-content:flex-start;
+        white-space:nowrap;
+        padding:11px 4%;
+    }
+
+    .hero{
+        min-height:430px;
+        padding:45px 6%;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .product-image{
+        height:170px;
+        font-size:60px;
+    }
+
+    .product-info{
+        padding:13px;
+    }
+
+    .product-info h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:17px;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .chat-box{
+        right:10px;
+        bottom:90px;
+        width:calc(100% - 20px);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .top-bar{
+        display:block;
+        text-align:center;
+    }
+
+    .top-bar span{
+        display:block;
+        margin-bottom:4px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .ai-button{
+        width:55px;
+        height:55px;
+        right:15px;
+        bottom:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+    <span>🚚 সারা বাংলাদেশে Delivery Available</span>
+    <a href="mailto:shikherbazar@gmail.com">
+        📧 shikherbazar@gmail.com
+    </a>
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="#home" class="logo">
+
+        <div class="logo-main">
+            শখের বাজার
+        </div>
+
+        <span class="logo-sub">
+            SHOKHER BAZAR
+        </span>
+
+    </a>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="আপনি কী খুঁজছেন?"
+            onkeyup="searchProducts()"
+        >
+
+        <button onclick="searchProducts()">
+            🔍
+        </button>
+    </div>
+
+    <div class="header-icons">
+
+        <button class="icon-btn" onclick="showMessage('Wishlist feature coming soon ❤️')">
+            ❤️
+        </button>
+
+        <button class="icon-btn" onclick="showMessage('আপনার Cart এখনো খালি 🛒')">
+            🛒
+        </button>
+
+        <button class="icon-btn" onclick="showMessage('Account system coming soon 👤')">
+            👤
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>✨ Welcome to Shokher Bazar</small>
+
+        <h1>
+            আপনার পছন্দের<br>
+            সবকিছু এক জায়গায়
+        </h1>
+
+        <p>
+            ঘড়ি, মানিব্যাগ, চশমা, পোশাক, ইলেকট্রনিক্স,
+            জুতা, Beauty Products এবং আরও অনেক কিছু।
+            আপনার শখের পণ্য এখন এক জায়গায়।
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="btn btn-primary">
+                🛍️ Shop Now
+            </a>
+
+            <a href="#categories" class="btn btn-light">
+                Categories দেখুন
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+    <div class="section-title">
+
+        <h2>ক্যাটাগরি</h2>
+
+        <p>
+            আপনার পছন্দের ক্যাটাগরি থেকে পণ্য বেছে নিন
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <div class="category" onclick="filterCategory('watch')">
+            <div class="category-icon">⌚</div>
+            <h3>ঘড়ি</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('wallet')">
+            <div class="category-icon">👛</div>
+            <h3>মানিব্যাগ</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('sunglass')">
+            <div class="category-icon">🕶️</div>
+            <h3>চশমা</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('clothing')">
+            <div class="category-icon">👕</div>
+            <h3>জামা-কাপড়</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('electronics')">
+            <div class="category-icon">🎧</div>
+            <h3>ইলেকট্রনিক্স</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('shoes')">
+            <div class="category-icon">👟</div>
+            <h3>জুতা</h3>
+        </div>
+
+        <div class="category" onclick="filterCategory('beauty')">
+            <div class="category-icon">💄</div>
+            <h3>Beauty</h3>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🏠</div>
+            <h3>Home & Lifestyle</h3>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🎁</div>
+            <h3>Gift Items</h3>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">📱</div>
+            <h3>Mobile Accessories</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>জনপ্রিয় পণ্য</h2>
+
+        <p>
+            আমাদের জনপ্রিয় কিছু পণ্য
+        </p>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+
+        <!-- WATCH -->
+
+        <div class="product" data-category="watch">
+
+            <span class="discount">22% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                ⌚
+            </div>
+
+            <div class="product-info">
+
+                <h3>Premium Men's Watch</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳1,250
+                </span>
+
+                <span class="old-price">
+                    ৳1,600
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Premium Men\\'s Watch')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- WALLET -->
+
+        <div class="product" data-category="wallet">
+
+            <span class="discount">27% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                👛
+            </div>
+
+            <div class="product-info">
+
+                <h3>Premium Leather Wallet</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳550
+                </span>
+
+                <span class="old-price">
+                    ৳750
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Premium Leather Wallet')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUNGLASS -->
+
+        <div class="product" data-category="sunglass">
+
+            <span class="discount">23% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                🕶️
+            </div>
+
+            <div class="product-info">
+
+                <h3>Premium Sunglasses</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳690
+                </span>
+
+                <span class="old-price">
+                    ৳900
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Premium Sunglasses')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLOTHING -->
+
+        <div class="product" data-category="clothing">
+
+            <span class="discount">21% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                👕
+            </div>
+
+            <div class="product-info">
+
+                <h3>Premium T-Shirt</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳750
+                </span>
+
+                <span class="old-price">
+                    ৳950
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Premium T-Shirt')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ELECTRONICS -->
+
+        <div class="product" data-category="electronics">
+
+            <span class="discount">22% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                🎧
+            </div>
+
+            <div class="product-info">
+
+                <h3>Wireless Headphone</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳1,490
+                </span>
+
+                <span class="old-price">
+                    ৳1,900
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Wireless Headphone')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE ACCESSORIES -->
+
+        <div class="product" data-category="electronics">
+
+            <span class="discount">29% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                📱
+            </div>
+
+            <div class="product-info">
+
+                <h3>Mobile Accessories</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳390
+                </span>
+
+                <span class="old-price">
+                    ৳550
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Mobile Accessories')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOES -->
+
+        <div class="product" data-category="shoes">
+
+            <span class="discount">20% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                👟
+            </div>
+
+            <div class="product-info">
+
+                <h3>Men's Casual Shoes</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳1,350
+                </span>
+
+                <span class="old-price">
+                    ৳1,700
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Men\\'s Casual Shoes')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BAG -->
+
+        <div class="product" data-category="clothing">
+
+            <span class="discount">24% OFF</span>
+
+            <button class="wishlist"
+                onclick="addWishlist(this)">
+                ♡
+            </button>
+
+            <div class="product-image">
+                🎒
+            </div>
+
+            <div class="product-info">
+
+                <h3>Travel Backpack</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <span class="price">
+                    ৳990
+                </span>
+
+                <span class="old-price">
+                    ৳1,300
+                </span>
+
+                <button class="buy-btn"
+                    onclick="orderProduct('Travel Backpack')">
+                    🛒 Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+
+<section id="offers">
+
+    <div class="offer">
+
+        <h2>🔥 Special Offer</h2>
+
+        <p>
+            নির্বাচিত পণ্যে বিশেষ ছাড় চলছে।
+            আজই আপনার পছন্দের পণ্য অর্ডার করুন।
+        </p>
+
+        <a href="#products"
+           class="btn btn-light">
+            অফার দেখুন
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>কেন শখের বাজার?</h2>
+
+        <p>
+            আমরা চাই আপনার shopping experience হোক সহজ ও নিরাপদ
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                সারা বাংলাদেশে দ্রুত ডেলিভারি।
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>Secure Shopping</h3>
+
+            <p>
+                নিরাপদ ও সহজ shopping experience।
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔄
+            </div>
+
+            <h3>Easy Return</h3>
+
+            <p>
+                নির্দিষ্ট পণ্যে সহজ return সুবিধা।
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💬
+            </div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                প্রয়োজন হলে আমাদের সাথে যোগাযোগ করুন।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>যোগাযোগ করুন</h2>
+
+        <p>
+            যেকোনো প্রশ্ন বা অর্ডারের জন্য আমাদের সাথে যোগাযোগ করুন।
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <div class="contact-item">
+
+                📧 <strong>Email</strong><br>
+
+                <a href="mailto:shikherbazar@gmail.com">
+                    shikherbazar@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📱 <strong>WhatsApp</strong><br>
+
+                <a href="https://wa.me/8801869349388"
+                   target="_blank">
+                    01869-349388
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📱 <strong>WhatsApp</strong><br>
+
+                <a href="https://wa.me/8801742224930"
+                   target="_blank">
+                    01742-224930
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📘 <strong>Facebook</strong><br>
+
+                <a href="https://www.facebook.com/share/1LapyJE2sB/"
+                   target="_blank">
+                    আমাদের Facebook Page
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>🛍️ অর্ডার করতে চান?</h3>
+
+            <p style="margin-top:15px;line-height:1.8;color:#666;">
+
+                আপনার পছন্দের পণ্যের নাম আমাদের WhatsApp-এ
+                পাঠিয়ে দিন। আমরা আপনাকে অর্ডার সম্পন্ন করতে
+                সাহায্য করব।
+
+            </p>
+
+            <br>
+
+            <a href="https://wa.me/8801869349388?text=আমি%20শখের%20বাজার%20থেকে%20একটি%20পণ্য%20অর্ডার%20করতে%20চাই।"
+               target="_blank"
+               class="btn btn-primary">
+
+                💬 WhatsApp-এ অর্ডার করুন
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>শখের বাজার</h3>
+
+            <p>
+                Shokher Bazar একটি modern online shopping
+                platform concept যেখানে বিভিন্ন ধরনের
+                প্রয়োজনীয় ও পছন্দের পণ্য এক জায়গায় পাওয়া যাবে।
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#offers">Offers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#products">Watches</a>
+                </li>
+
+                <li>
+                    <a href="#products">Wallets</a>
+                </li>
+
+                <li>
+                    <a href="#products">Clothing</a>
+                </li>
+
+                <li>
+                    <a href="#products">Electronics</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <ul>
+
+                <li>
+                    📱 01869-349388
+                </li>
+
+                <li>
+                    📱 01742-224930
+                </li>
+
+                <li>
+                    📧 shikherbazar@gmail.com
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Shokher Bazar. All Rights Reserved.
+
+        <div class="powered">
+            Powered by MamuN, SiddiK
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= AI CHAT BUTTON ================= -->
+
+<button class="ai-button"
+        onclick="toggleChat()"
+        title="AI Assistant">
+
+    🤖
+
+</button>
+
+
+<!-- ================= AI CHAT BOX ================= -->
+
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+
+        <h3>
+            🤖 Shokher Bazar Assistant
+        </h3>
+
+        <button class="chat-close"
+                onclick="toggleChat()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+
+            👋 আসসালামু আলাইকুম!<br><br>
+
+            আমি <strong>Shokher Bazar Assistant</strong>।
+            আপনাকে পণ্য খুঁজে পেতে সাহায্য করতে পারি।
+
+            <br><br>
+
+            যেমন লিখতে পারেন:
+            <br>
+            • ঘড়ি চাই<br>
+            • ১০০০ টাকার মধ্যে পণ্য চাই<br>
+            • Electronics দেখান<br>
+            • কিভাবে অর্ডার করবো?
+
+        </div>
+
+    </div>
+
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="আপনার প্রশ্ন লিখুন..."
+            onkeypress="handleChatKey(event)"
+        >
+
+        <button onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* ================= MESSAGE ================= */
+
+function showMessage(message){
+
+    alert(message);
+
+}
+
+
+/* ================= WISHLIST ================= */
+
+function addWishlist(button){
+
+    if(button.innerHTML === "♡"){
+
+        button.innerHTML = "❤️";
+
+        alert("পণ্যটি Wishlist-এ যোগ হয়েছে ❤️");
+
+    }else{
+
+        button.innerHTML = "♡";
+
+    }
+
+}
+
+
+/* ================= ORDER ================= */
+
+function orderProduct(productName){
+
+    let message =
+    "আসসালামু আলাইকুম, আমি Shokher Bazar থেকে \"" +
+    productName +
+    "\" অর্ডার করতে চাই।";
+
+    let url =
+    "https://wa.me/8801869349388?text=" +
+    encodeURIComponent(message);
+
+    window.open(url,"_blank");
+
+}
+
+
+/* ================= SEARCH ================= */
+
+function searchProducts(){
+
+    let search =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+    let products =
+    document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        let name =
+        product
+        .querySelector("h3")
+        .innerText
+        .toLowerCase();
+
+        if(search === "" || name.includes(search)){
+
+            product.style.display = "";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* ================= CATEGORY FILTER ================= */
+
+function filterCategory(category){
+
+    let products =
+    document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        if(product.dataset.category === category){
+
+            product.style.display = "";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+    document
+    .getElementById("products")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ================= AI CHAT ================= */
+
+function toggleChat(){
+
+    let chat =
+    document.getElementById("chatBox");
+
+    if(chat.style.display === "block"){
+
+        chat.style.display = "none";
+
+    }else{
+
+        chat.style.display = "block";
+
+        document
+        .getElementById("chatInput")
+        .focus();
+
+    }
+
+}
+
+
+/* ================= CHAT ENTER ================= */
+
+function handleChatKey(event){
+
+    if(event.key === "Enter"){
+
+        sendMessage();
+
+    }
+
+}
+
+
+/* ================= CHAT ================= */
+
+function sendMessage(){
+
+    let input =
+    document.getElementById("chatInput");
+
+    let message =
+    input.value.trim();
+
+    if(message === ""){
+
+        return;
+
+    }
+
+
+    let chatBody =
+    document.getElementById("chatBody");
+
+
+    /* USER MESSAGE */
+
+    let userMessage =
+    document.createElement("div");
+
+    userMessage.className =
+    "user-message";
+
+    userMessage.innerText =
+    message;
+
+    chatBody.appendChild(userMessage);
+
+
+    input.value = "";
+
+
+    /* BOT RESPONSE */
+
+    setTimeout(function(){
+
+        let response =
+        getBotResponse(message);
+
+
+        let botMessage =
+        document.createElement("div");
+
+        botMessage.className =
+        "bot-message";
+
+        botMessage.innerHTML =
+        response;
+
+        chatBody.appendChild(botMessage);
+
+
+        chatBody.scrollTop =
+        chatBody.scrollHeight;
+
+    },500);
+
+}
+
+
+/* ================= BOT LOGIC ================= */
+
+function getBotResponse(message){
+
+    let text =
+    message.toLowerCase();
+
+
+    if(
+        text.includes("ঘড়ি") ||
+        text.includes("watch")
+    ){
+
+        return `
+        ⌚ আমাদের Premium Men's Watch
+        বর্তমানে ৳1,250।<br><br>
+        অর্ডার করতে "Order Now" অথবা WhatsApp ব্যবহার করুন।
+        `;
+
+    }
+
+
+    if(
+        text.includes("মানিব্যাগ") ||
+        text.includes("wallet")
+    ){
+
+        return `
+        👛 Premium Leather Wallet
+        এর দাম ৳550।<br><br>
+        চাইলে এখনই অর্ডার করতে পারেন।
+        `;
+
+    }
+
+
+    if(
+        text.includes("চশমা") ||
+        text.includes("sunglass")
+    ){
+
+        return `
+        🕶️ Premium Sunglasses
+        এর দাম ৳690।
+        `;
+
+    }
+
+
+    if(
+        text.includes("electronics") ||
+        text.includes("ইলেকট্রনিক")
+    ){
+
+        return `
+        🎧 Electronics category-তে
+        Wireless Headphone এবং Mobile Accessories
+        রয়েছে।
+        `;
+
+    }
+
+
+    if(
+        text.includes("অর্ডার") ||
+        text.includes("order")
+    ){
+
+        return `
+        🛍️ অর্ডার করতে পছন্দের পণ্যের
+        "Order Now" button চাপুন।
+        <br><br>
+        অথবা WhatsApp-এ আমাদের সাথে যোগাযোগ করুন।
+        `;
+
+    }
+
+
+    if(
+        text.includes("দাম") ||
+        text.includes("price")
+    ){
+
+        return `
+        💰 কোন পণ্যের দাম জানতে চান?
+        যেমন: "ঘড়ির দাম কত?"
+        `;
+
+    }
+
+
+    if(
+        text.includes("যোগাযোগ") ||
+        text.includes("contact")
+    ){
+
+        return `
+        📱 01869-349388<br>
+        📱 01742-224930<br><br>
+        📧 shikherbazar@gmail.com
+        `;
+
+    }
+
+
+    return `
+    😊 আপনার প্রশ্নটি বুঝতে পারিনি।<br><br>
+
+    আপনি লিখতে পারেন:<br>
+
+    • ঘড়ি চাই<br>
+    • মানিব্যাগের দাম কত?<br>
+    • Electronics দেখান<br>
+    • কিভাবে অর্ডার করবো?<br>
+    • যোগাযোগ
+    `;
+
+}
+
+</script>
+
+</body>
+</html>

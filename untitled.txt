@@ -1,0 +1,52 @@
+index.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Md. Abdullah Al Mamun</title>
+</head>
+
+<body>
+
+    <h1>Md. Abdullah Al Mamun</h1>
+
+    <h2>Project Engineer (Electrical)</h2>
+
+    <hr>
+
+    <h2>About Me</h2>
+    <p>
+        I am a Diploma Engineer in Electrical Technology.
+        I am interested in Electrical Engineering, Project Work
+        and Technology.
+    </p>
+
+    <h2>Education</h2>
+    <p>
+        Diploma in Electrical Engineering<br>
+        SSC – Science
+    </p>
+
+    <h2>Experience</h2>
+    <p>
+        Project Engineer – Electrical<br>
+        Junior Project Engineer
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>Electrical Maintenance</li>
+        <li>Electrical Troubleshooting</li>
+        <li>MS Word</li>
+        <li>MS Excel</li>
+        <li>MS PowerPoint</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+        Phone: Your Phone Number<br>
+        Email: Your Email Address<br>
+        Location: Dhaka, Bangladesh
+    </p>
+
+</body>
+</html>html
